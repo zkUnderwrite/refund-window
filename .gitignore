@@ -1,0 +1,9 @@
+target/
+app/node_modules/
+app/dist/
+web/dist/
+*.wasm
+!contracts/**/test_snapshots/**
+.env
+.refundwin.json
+.refundwin-sim.json

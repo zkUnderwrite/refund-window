@@ -1,0 +1,18 @@
+{
+  "_note": "Checkout configuration for testnet. Fill contractId and the asset issuers after scripts/deploy-testnet.sh (which prints them). All names are placeholders for a simulated PSP.",
+  "network": "testnet",
+  "networkPassphrase": "Test SDF Network ; September 2015",
+  "rpcUrl": "https://soroban-testnet.stellar.org",
+  "contractId": "",
+  "psp": { "name": "Simulated PSP (testnet)", "arbiterName": "PSP disputes desk (simulated)" },
+  "minWindowSecs": 3600,
+  "maxWindowSecs": 5184000,
+  "assets": {
+    "USDC": { "issuer": "", "note": "self-issued test asset named USDC; not real USDC" },
+    "EURC": { "issuer": "", "note": "self-issued test asset named EURC; not real EURC" }
+  },
+  "merchants": {
+    "REPLACE_WITH_M1_G_ADDRESS": { "name": "Handicraft exporter (simulated)", "feeBps": 150, "windowSecs": 1209600, "express": true },
+    "REPLACE_WITH_M2_G_ADDRESS": { "name": "Digital goods seller (simulated)", "feeBps": 125, "windowSecs": 259200, "express": false }
+  }
+}

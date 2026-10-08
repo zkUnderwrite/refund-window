@@ -1,0 +1,18 @@
+{
+  "_note": "Recorded-format fixture written for offline tests (Anthropic Messages API response shape). Not a live model output.",
+  "id": "msg_fixture_d2",
+  "type": "message",
+  "role": "assistant",
+  "model": "claude-sonnet-5",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"summary\":\"The buyer paid 29.00 USDC for a video course and reports that the login link fails with an invalid token. The merchant's access log shows two bounced login emails and no login.\",\"claims\":{\"buyer\":[\"The login link returns 'invalid token'.\"],\"merchant\":[\"The buyer never logged in; the magic link bounced.\"]},\"questions\":{\"buyer\":[\"Which email address did you use at checkout?\"],\"merchant\":[\"Can you resend access to a different address?\"]},\"inconsistencies\":[],\"checklist_additions\":[{\"item\":\"Email delivery log for the access link\",\"whyForReason\":\"Shows whether access was ever delivered\",\"provided\":\"merchant\",\"evidenceRef\":\"access-log.csv\"}]}"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 1800,
+    "output_tokens": 420
+  }
+}

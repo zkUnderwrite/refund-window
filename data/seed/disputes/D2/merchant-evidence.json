@@ -1,0 +1,17 @@
+[
+  {
+    "name": "merchant-statement.txt",
+    "kind": "statement",
+    "sha256": "c41874bd6609c46bcbdd211aa71d9475380c65173f5222b7c4c40705daa6dd16",
+    "submittedAt": "2026-09-22T16:05:00Z"
+  },
+  {
+    "name": "access-log.csv",
+    "kind": "access_log",
+    "sha256": "18ddaf0b014159ed2a767b24af256f3887876531910b2c7d00e701ab3ef7a906",
+    "submittedAt": "2026-09-22T16:05:00Z",
+    "extracted": {
+      "lastLoginAt": null
+    }
+  }
+]

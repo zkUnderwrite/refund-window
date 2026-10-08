@@ -1,0 +1,14 @@
+[
+  {
+    "name": "buyer-statement.txt",
+    "kind": "statement",
+    "sha256": "d19269f7ba93498cee06cb53cafce7c144792657acacc71283bb4fa38e9523b6",
+    "submittedAt": "2026-09-16T10:00:00Z"
+  },
+  {
+    "name": "empty-mailbox.jpg",
+    "kind": "photo",
+    "sha256": "2c0b2c8b98e3c7a7efcc7e886290322c5e386e14c8944a0af7b69881b2853997",
+    "submittedAt": "2026-09-16T10:00:00Z"
+  }
+]

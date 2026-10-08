@@ -1,0 +1,74 @@
+[
+  {
+    "amount": "1",
+    "fee_bps": 150,
+    "fee": "0",
+    "note": "1 stroop at 150 bps"
+  },
+  {
+    "amount": "10000000",
+    "fee_bps": 150,
+    "fee": "150000",
+    "note": "1 unit at 150 bps"
+  },
+  {
+    "amount": "33333333",
+    "fee_bps": 125,
+    "fee": "416666",
+    "note": "3.3333333 at 125 bps (floor)"
+  },
+  {
+    "amount": "50",
+    "fee_bps": 150,
+    "fee": "0",
+    "note": "0.0000050 dust order at 150 bps"
+  },
+  {
+    "amount": "50",
+    "fee_bps": 125,
+    "fee": "0",
+    "note": "0.0000050 dust order at 125 bps"
+  },
+  {
+    "amount": "1",
+    "fee_bps": 1000,
+    "fee": "0",
+    "note": "merchant share of 1 stroop at the max fee"
+  },
+  {
+    "amount": "499900000",
+    "fee_bps": 150,
+    "fee": "7498500",
+    "note": "49.99 at 150 bps"
+  },
+  {
+    "amount": "73333333",
+    "fee_bps": 125,
+    "fee": "916666",
+    "note": "7.3333333 at 125 bps"
+  },
+  {
+    "amount": "19990000000",
+    "fee_bps": 150,
+    "fee": "299850000",
+    "note": "1999.00 at 150 bps"
+  },
+  {
+    "amount": "1000000000000000",
+    "fee_bps": 1000,
+    "fee": "100000000000000",
+    "note": "MAX_AMOUNT at 1000 bps (no overflow)"
+  },
+  {
+    "amount": "66",
+    "fee_bps": 150,
+    "fee": "0",
+    "note": "66 stroops: 0.99 floors to 0"
+  },
+  {
+    "amount": "67",
+    "fee_bps": 150,
+    "fee": "1",
+    "note": "67 stroops: 1.005 floors to 1"
+  }
+]

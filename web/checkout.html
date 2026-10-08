@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Refund Window checkout</title>
+  <style>
+    :root { --fg: #1b1f24; --muted: #57606a; --bg: #ffffff; --panel: #f6f8fa; --line: #d0d7de; --accent: #0b5cad; --warn: #9a6700; --bad: #b42318; }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #e6edf3; --muted: #9da7b1; --bg: #0d1117; --panel: #161b22; --line: #30363d; --accent: #58a6ff; --warn: #d29922; --bad: #f85149; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--fg); background: var(--bg); }
+    main { max-width: 34rem; margin: 0 auto; padding: 24px 16px 48px; }
+    h1 { font-size: 1.35rem; margin: 0 0 4px; }
+    .muted { color: var(--muted); font-size: 0.92rem; }
+    section { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin: 14px 0; }
+    dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; margin: 0; }
+    dt { color: var(--muted); }
+    dd { margin: 0; overflow-wrap: anywhere; }
+    .refund-to { font-weight: 600; overflow-wrap: anywhere; }
+    button { font: inherit; padding: 10px 16px; border-radius: 8px; border: 1px solid var(--accent); background: var(--accent); color: #fff; cursor: pointer; }
+    button.secondary { background: transparent; color: var(--accent); }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    label { display: flex; gap: 8px; align-items: flex-start; margin-top: 10px; }
+    .status { white-space: pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85rem; overflow-wrap: anywhere; }
+    .warn { color: var(--warn); }
+    .bad { color: var(--bad); }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Pay with a refund window</h1>
+    <p class="muted" id="order-line">Loading order…</p>
+
+    <section id="terms" aria-labelledby="terms-h">
+      <h2 id="terms-h" class="muted" style="font-size:1rem;margin:0 0 8px">Terms fixed on-chain when you pay</h2>
+      <dl>
+        <dt>Merchant</dt><dd id="t-merchant">–</dd>
+        <dt>Amount</dt><dd id="t-amount">–</dd>
+        <dt>Released to merchant</dt><dd id="t-release">–</dd>
+        <dt>PSP fee</dt><dd id="t-fee">–</dd>
+        <dt>Disputes decided by</dt><dd id="t-arbiter">–</dd>
+      </dl>
+      <p class="muted">Before the release time you can open one dispute. If the arbiter does not rule within its deadline, you are refunded in full.</p>
+    </section>
+
+    <section>
+      <div id="wallet-box"></div>
+      <p id="refund-line" hidden>Refunds for this order can only go to: <span class="refund-to" id="refund-to"></span></p>
+      <label id="second-box" hidden>
+        <input type="checkbox" id="second" />
+        <span>Refund to a different wallet I control (you will connect it and sign with it too)</span>
+      </label>
+      <p class="muted warn">Paying from an exchange account? Use a self-custody wallet instead: exchanges cannot sign this checkout, and refunds could not reach you.</p>
+    </section>
+
+    <section id="mode-box" hidden>
+      <label><input type="radio" name="mode" value="escrow" checked /> <span>Protected payment (refund window and disputes)</span></label>
+      <label><input type="radio" name="mode" value="express" /> <span id="express-label">Pre-order</span></label>
+    </section>
+
+    <button id="pay" disabled>Connect a wallet first</button>
+    <section id="result" hidden><div class="status" id="status"></div></section>
+  </main>
+  <script type="module" src="./dist/checkout.js"></script>
+</body>
+</html>

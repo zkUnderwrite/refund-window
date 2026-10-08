@@ -1,0 +1,57 @@
+{
+  "orders": 50,
+  "escrow_orders": 44,
+  "express_orders": 6,
+  "states": {
+    "Released": 38,
+    "Refunded": 4,
+    "Resolved": 1,
+    "TimedOut": 1
+  },
+  "refunded_outside_dispute": 3,
+  "refunded_in_dispute": 1,
+  "rejected": {
+    "DuplicateOrder": 1,
+    "WindowClosed": 1
+  },
+  "late_releases": 4,
+  "untouched_releases": 35,
+  "refund_pending": 1,
+  "refund_settled": 1,
+  "express": {
+    "claimed": 5,
+    "reclaimed": 1,
+    "claimed_amount": "885.0000000",
+    "reclaimed_amount": "32.4000000"
+  },
+  "totals": {
+    "USDC": {
+      "paid": "4127.5100050",
+      "payout": {
+        "M1": "3475.2080500",
+        "M2": "325.3220050"
+      },
+      "refunded": "269.9400000",
+      "fees": "57.0399500",
+      "contract_after": "0.0000000"
+    },
+    "EURC": {
+      "paid": "355.9700000",
+      "payout": {
+        "M1": "313.3974500"
+      },
+      "refunded": "37.8000000",
+      "fees": "4.7725500",
+      "contract_after": "0.0000000"
+    },
+    "PYUSD": {
+      "paid": "29.8333333",
+      "payout": {
+        "M2": "29.4604167"
+      },
+      "refunded": "0.0000000",
+      "fees": "0.3729166",
+      "contract_after": "0.0000000"
+    }
+  }
+}

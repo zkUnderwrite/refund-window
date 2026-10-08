@@ -1,0 +1,16 @@
+[package]
+name = "refund_escrow"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Refund windows and dispute escrow for stablecoin checkouts: refunds bound to the address that signed at checkout, automatic release at the deadline, a bounded arbiter"
+
+[lib]
+crate-type = ["cdylib"]
+doctest = false
+
+[dependencies]
+soroban-sdk = { workspace = true }
+
+[dev-dependencies]
+soroban-sdk = { workspace = true, features = ["testutils"] }

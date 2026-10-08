@@ -1,0 +1,15 @@
+[
+  {
+    "name": "buyer-statement.txt",
+    "kind": "statement",
+    "sha256": "d3786d0e269959af5073813373498956bf30639b1decf5e0e31ff2d74e98bf5b",
+    "submittedAt": "2026-09-13T09:40:00Z"
+  },
+  {
+    "name": "whatsapp-2026-09-10.png",
+    "kind": "chat",
+    "sha256": "3877cd98f24b8de32ad3959d69f94b15d7b31735afd7167562a39388b0860ad5",
+    "note": "chat where the merchant says it shipped",
+    "submittedAt": "2026-09-13T09:40:00Z"
+  }
+]

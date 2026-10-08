@@ -1,0 +1,22 @@
+[
+  {
+    "name": "merchant-statement.txt",
+    "kind": "statement",
+    "sha256": "a04778646ccf3fdfbf0704d26214551bc5b7554560c2df1dd41e401fe7c51711",
+    "submittedAt": "2026-09-17T12:35:00Z"
+  },
+  {
+    "name": "guia-dhl.pdf",
+    "kind": "tracking",
+    "sha256": "9c1e726cf9bdc78e170ce3a8d04d69bc377b5b5e87a89902aea5794d59c6f633",
+    "note": "tracking number copied from another order",
+    "submittedAt": "2026-09-17T12:35:00Z",
+    "extracted": {
+      "carrier": "DHL",
+      "trackingNo": "JD014600006281234567",
+      "status": "delivered",
+      "statusAt": "2026-08-29T15:20:00Z",
+      "deliveryAddressMatches": false
+    }
+  }
+]

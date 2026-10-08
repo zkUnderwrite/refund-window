@@ -1,0 +1,38 @@
+[
+  {
+    "id": "M1",
+    "name": "Simulated: handicraft exporter, Oaxaca (MX), ships to US and EU buyers",
+    "address": "GAKWLYSJQTMIZ7G4EVHA4XMWIZTWERPS7ZGSSGENYLJ7AHVCV6MXPNEP",
+    "payout": "GAYJDWYFYDIXY66CPZEYYE3JCHCQ7U2VUCKS6WOPNPH45Q7IDBR3LCBF",
+    "fee_bps": 150,
+    "window_s": 1209600,
+    "tokens": [
+      "USDC",
+      "EURC"
+    ],
+    "express": true,
+    "tz": "-06:00",
+    "country": "MX",
+    "goods": "physical",
+    "return_policy": "Returns accepted within 14 days of delivery if the item is damaged or not as pictured. Buyer pays return shipping unless the item is damaged.",
+    "ships_within_days": 5
+  },
+  {
+    "id": "M2",
+    "name": "Simulated: digital goods seller (templates, course access), Lagos (NG)",
+    "address": "GDPDROQKD7ZINXTA5QXG76JS5IQ4SQNRYUZHQJAAKM4XNGFA3WXIO2ZM",
+    "payout": "GAX77K4VTYAXELAPYYWUMGLHGSNXFEKZ47AR3QVDB5SFPUE3TYIF5GRW",
+    "fee_bps": 125,
+    "window_s": 259200,
+    "tokens": [
+      "USDC",
+      "PYUSD"
+    ],
+    "express": false,
+    "tz": "+01:00",
+    "country": "NG",
+    "goods": "digital",
+    "return_policy": "Refund if you cannot access the download or course within 48 hours of purchase. No refunds after files are downloaded.",
+    "ships_within_days": null
+  }
+]

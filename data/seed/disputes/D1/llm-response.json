@@ -1,0 +1,18 @@
+{
+  "_note": "Recorded-format fixture written for offline tests (Anthropic Messages API response shape). Not a live model output.",
+  "id": "msg_fixture_d1",
+  "type": "message",
+  "role": "assistant",
+  "model": "claude-sonnet-5",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"summary\":\"The buyer paid 64.00 USDC for a silk rebozo and says it has not arrived. The merchant's carrier file shows the parcel held by customs in Memphis and last marked in transit on 2026-09-11. No delivery scan exists. The buyer's evidence is a chat screenshot; the merchant provided tracking and an invoice.\",\"claims\":{\"buyer\":[\"Paid on 2026-09-03 and the item has not arrived.\",\"The merchant said on WhatsApp that it had shipped.\"],\"merchant\":[\"Shipped on 2026-09-04 with Estafeta.\",\"The parcel is held by customs and still in transit.\"]},\"questions\":{\"buyer\":[\"Has the carrier contacted you about customs duties or paperwork?\"],\"merchant\":[\"Did you declare the parcel value and contents for customs?\",\"Can you open a trace request with Estafeta?\"]},\"inconsistencies\":[\"The buyer says there has been no movement for a week, but the carrier shows a customs event on 2026-09-08.\"],\"checklist_additions\":[{\"item\":\"Customs declaration or hold notice\",\"whyForReason\":\"Explains the delay for a parcel held by customs\",\"provided\":\"none\"}]}"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 1800,
+    "output_tokens": 420
+  }
+}

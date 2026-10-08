@@ -1,0 +1,26 @@
+[workspace]
+resolver = "2"
+members = ["contracts/*"]
+
+[workspace.dependencies]
+soroban-sdk = "28.0.0"
+
+[profile.release]
+opt-level = "z"
+overflow-checks = true
+debug = 0
+strip = "symbols"
+debug-assertions = false
+panic = "abort"
+codegen-units = 1
+lto = true
+
+[profile.release-with-logs]
+inherits = "release"
+debug-assertions = true
+
+# The property and scenario tests run tens of thousands of contract calls in
+# the Soroban host; an optimised host keeps `cargo test` fast. The contract
+# crate itself stays unoptimised in tests.
+[profile.dev.package."*"]
+opt-level = 2

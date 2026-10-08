@@ -1,0 +1,27 @@
+[
+  {
+    "name": "merchant-statement.txt",
+    "kind": "statement",
+    "sha256": "a27be5e846558bc5ef5a4c50bda16a86af517b1671338df48e697af67f5609fd",
+    "submittedAt": "2026-09-14T16:20:00Z"
+  },
+  {
+    "name": "carrier-status.csv",
+    "kind": "tracking",
+    "sha256": "25f7840984c1ba1771b31a36129564a59dd07b11d3e156686a53a13b378233c7",
+    "submittedAt": "2026-09-14T16:20:00Z",
+    "extracted": {
+      "carrier": "Estafeta",
+      "trackingNo": "EST7734410298MX",
+      "status": "in transit",
+      "statusAt": "2026-09-11T14:30:00Z",
+      "deliveryAddressMatches": true
+    }
+  },
+  {
+    "name": "factura-1033.pdf",
+    "kind": "invoice",
+    "sha256": "2c121416ce26a17ad15031ee997d276f33aaeca2a45f8316621aa5da0a54efdb",
+    "submittedAt": "2026-09-14T16:20:00Z"
+  }
+]
