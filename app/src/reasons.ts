@@ -10,6 +10,7 @@ export const REASONS = {
 
 export type ReasonName = keyof typeof REASONS;
 
+/** Converts a reason string to its corresponding code. */
 export function reasonCode(name: string): number {
   const key = name.trim().toUpperCase().replace(/[\s-]+/g, "_") as ReasonName;
   const code = REASONS[key];
@@ -19,6 +20,7 @@ export function reasonCode(name: string): number {
   return code;
 }
 
+/** Retrieves the reason name from a given code. */
 export function reasonName(code: number): ReasonName {
   const hit = (Object.entries(REASONS) as [ReasonName, number][]).find(([, c]) => c === code);
   if (!hit) throw new Error(`unknown reason code ${code}`);
