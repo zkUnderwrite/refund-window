@@ -1,6 +1,7 @@
 // Durations on the command line: 90s, 30m, 1h, 3d, 14d, 2w (or plain seconds).
 const UNITS: Record<string, number> = { s: 1, m: 60, h: 3_600, d: 86_400, w: 604_800 };
 
+/** Parses duration strings like 1h, 30m into seconds. */
 export function parseDuration(input: string): number {
   const s = input.trim().toLowerCase();
   if (/^\d+$/.test(s)) return Number(s);
@@ -18,6 +19,7 @@ export function formatDuration(secs: number): string {
   return `${secs}s`;
 }
 
+/** Converts unix seconds to ISO UTC string. */
 export function isoUtc(unixSecs: number): string {
   return new Date(unixSecs * 1000).toISOString().replace(".000Z", "Z");
 }
