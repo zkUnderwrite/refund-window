@@ -7,6 +7,7 @@ export const ONE = 10_000_000n;
 /** Largest single order accepted by the contract: 10^15 stroops. */
 export const MAX_AMOUNT = 1_000_000_000_000_000n;
 
+/** Parses a string into stroops. */
 export function parseAmount(input: string): bigint {
   const s = input.trim();
   const m = /^(\d+)(?:\.(\d+))?$/.exec(s);
