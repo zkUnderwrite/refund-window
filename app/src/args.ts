@@ -13,6 +13,7 @@ export interface Parsed {
 
 export class ArgError extends Error {}
 
+/** Parses raw command line arguments into positional arguments and flags. */
 export function parseArgv(argv: string[]): Parsed {
   const positional: string[] = [];
   const flags = new Map<string, string | true>();
@@ -110,13 +111,14 @@ export function refOrDue(f: Flags): { due: true } | { due: false; ref: string } 
   return due ? { due: true } : { due: false, ref: ref! };
 }
 
-/** `--asset USDC` or `--asset USDC:G…` */
+/** Parses asset flags like USDC or USDC:G... */
 export function parseAssetFlag(v: string): { code: string; issuer?: string } {
   const m = /^([A-Za-z0-9]{1,12})(?::(G[A-Z2-7]{55}))?$/.exec(v.trim());
   if (!m) throw new ArgError(`bad --asset "${v}" (use CODE or CODE:G…ISSUER)`);
   return { code: m[1]!.toUpperCase(), ...(m[2] ? { issuer: m[2] } : {}) };
 }
 
+/** Parses the network argument, defaulting to local-sim if unspecified. */
 export function parseNetwork(v: string | undefined): "testnet" | "local-sim" {
   const n = v ?? process.env.REFUNDWIN_NETWORK ?? "local-sim";
   if (n !== "testnet" && n !== "local-sim") throw new ArgError(`--network must be testnet or local-sim, got "${n}"`);
