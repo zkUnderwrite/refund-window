@@ -7,10 +7,12 @@ import { normaliseRef, orderIdPreimage } from "./ref.ts";
 
 export { normaliseRef };
 
+/** Generates the raw SHA-256 digest bytes for an order id. */
 export function orderIdBytes(merchant: string, ref: string): Buffer {
   return createHash("sha256").update(orderIdPreimage(merchant, ref), "utf8").digest();
 }
 
+/** Generates the hex-encoded SHA-256 digest for an order id. */
 export function orderIdHex(merchant: string, ref: string): string {
   return orderIdBytes(merchant, ref).toString("hex");
 }
