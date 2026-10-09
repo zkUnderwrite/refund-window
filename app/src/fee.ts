@@ -14,7 +14,7 @@ export function feeFor(amount: bigint, feeBps: number): bigint {
   return (amount * BigInt(feeBps)) / BPS;
 }
 
-/** Splits a merchant share into [net to payout, fee]. */
+/** Splits a merchant share into net payout and fee. */
 export function splitMerchantShare(share: bigint, feeBps: number): [bigint, bigint] {
   const fee = feeFor(share, feeBps);
   return [share - fee, fee];
