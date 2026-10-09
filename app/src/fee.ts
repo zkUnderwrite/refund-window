@@ -5,6 +5,7 @@
 export const BPS = 10_000n;
 export const MAX_FEE_BPS = 1_000;
 
+/** Calculates fee based on amount and basis points. */
 export function feeFor(amount: bigint, feeBps: number): bigint {
   if (amount < 0n) throw new Error("amount must be non-negative");
   if (!Number.isInteger(feeBps) || feeBps < 0 || feeBps > MAX_FEE_BPS) {
