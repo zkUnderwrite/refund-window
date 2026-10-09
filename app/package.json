@@ -20,7 +20,8 @@
     "simulate": "node --disable-warning=ExperimentalWarning src/cli.ts simulate",
     "seed": "node --disable-warning=ExperimentalWarning src/cli.ts seed",
     "fixtures": "node --disable-warning=ExperimentalWarning scripts/make-fixtures.ts",
-    "typecheck:web": "tsc -p ../web/tsconfig.json"
+    "typecheck:web": "tsc -p ../web/tsconfig.json",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\""
   },
   "dependencies": {
     "@stellar/stellar-sdk": "^17.1.0"
